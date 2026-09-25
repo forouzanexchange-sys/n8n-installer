@@ -96,8 +96,8 @@ services:
       - WEBHOOK_URL=https://${DOMAIN_NAME}/
       - GENERIC_TIMEZONE=${TIMEZONE}
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
-      - GENAI_OPENAI_API_KEY=${AI_API_KEY}
-      - GENAI_OPENAI_BASE_URL=${AI_BASE_URL}
+      - N8N_AI_OPENAI_API_KEY=${AI_API_KEY}
+      - N8N_AI_OPENAI_BASE_URL=${AI_BASE_URL}
     volumes:
       - n8n_data:/home/node/.n8n
     networks:
@@ -112,9 +112,32 @@ networks:
   n8n_net:
 EOF
 
+chmod 600 "$INSTALL_DIR/docker-compose.yml"
+
 echo -e "\n${YELLOW}[4/4] Starting Services...${NC}"
 docker compose down || true
 docker compose up -d
+
+echo -e "\n${YELLOW}[SECURITY] Applying additional hardening...${NC}"
+
+if ! command -v fail2ban-client &> /dev/null; then
+  apt-get install -y fail2ban
+  systemctl enable --now fail2ban
+  echo -e "${GREEN}Fail2ban installed and enabled.${NC}"
+else
+  echo -e "${GREEN}Fail2ban is already installed.${NC}"
+fi
+
+if [ -s /root/.ssh/authorized_keys ]; then
+  sed -i 's/#PasswordAuthentication yes/PasswordAuthentication no/' /etc/ssh/sshd_config
+  sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/' /etc/ssh/sshd_config
+  systemctl restart ssh
+  echo -e "${GREEN}SSH hardened: password auth disabled, key auth enabled.${NC}"
+else
+  echo -e "${YELLOW}[WARN] No SSH keys found in /root/.ssh/authorized_keys.${NC}"
+  echo -e "${YELLOW}[WARN] Skipping SSH hardening to prevent lockout.${NC}"
+  echo -e "${YELLOW}[WARN] Add your SSH key first, then re-run the hardening step manually.${NC}"
+fi
 
 echo -e "\n${GREEN}====================================================${NC}"
 echo -e "${GREEN}  n8n Installed & Started Successfully!             ${NC}"
