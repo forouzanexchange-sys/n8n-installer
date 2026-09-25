@@ -1,19 +1,16 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=220&amp;section=header&amp;text=n8n%20Installer&amp;fontSize=70&amp;fontColor=ffffff&amp;animation=twinkling&amp;fontAlignY=38&amp;desc=One-Click%20n8n%20with%20Auto%20SSL%20%26%20Advanced%20Security&amp;descAlignY=58&amp;descSize=18" width="100%"/>
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20%7C%2024.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
-[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
-[![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://n8n.io/)
-[![Caddy](https://img.shields.io/badge/Caddy-1F88C0?style=for-the-badge&logo=caddy&logoColor=white)](https://caddyserver.com/)
-
-<br>
+# 🚀 n8n Installer
 
 **نصب خودکار و امن n8n روی سرور شخصی شما**
-*همراه با SSL خودکار، Fail2ban، و بهینه‌سازی برای استریم داده‌های زنده*
 
-[نصب سریع](#-نصب-سریع) · [ویژگی‌ها](#-ویژگی‌ها) · [پیش‌نیازها](#-پیش‌نیازها) · [دستورات مفید](#-دستورات-مفید) · [امنیت](#-امنیت)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20%7C%2024.04-E95420?logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![n8n](https://img.shields.io/badge/n8n-EA4B71?logo=n8n&logoColor=white)](https://n8n.io/)
+[![Caddy](https://img.shields.io/badge/Caddy-1F88C0?logo=caddy&logoColor=white)](https://caddyserver.com/)
+
+یک اسکریپت کامل برای نصب خودکار n8n روی VPS شخصی، با SSL خودکار و امنیت پیشرفته.
 
 </div>
 
