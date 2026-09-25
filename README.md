@@ -233,10 +233,6 @@ cd /opt/n8n-docker && docker compose up -d
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=footer&text=Happy%20Automation!&fontSize=42&fontColor=ffffff&animation=twinkling&fontAlignY=75" width="100%"/>
-
-<br>
-
 ### ✦ نویسندگان اسکریپت ✦
 
 <table>
@@ -259,8 +255,6 @@ cd /opt/n8n-docker && docker compose up -d
 </table>
 
 <br>
-
-*ساخته شده با ❤️ در ایران*
 
 ⭐ اگه این پروژه به کارت اومد، یه ستاره بده
 
