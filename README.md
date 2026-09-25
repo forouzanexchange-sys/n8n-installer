@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=220&section=header&text=n8n%20Installer&fontSize=70&fontColor=ffffff&animation=twinkling&fontAlignY=38&desc=One-Click%20n8n%20with%20Auto%20SSL%20%26%20Advanced%20Security&descAlignY=58&descSize=18" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=220&amp;section=header&amp;text=n8n%20Installer&amp;fontSize=70&amp;fontColor=ffffff&amp;animation=twinkling&amp;fontAlignY=38&amp;desc=One-Click%20n8n%20with%20Auto%20SSL%20%26%20Advanced%20Security&amp;descAlignY=58&amp;descSize=18" width="100%"/>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04%20%7C%2024.04-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
